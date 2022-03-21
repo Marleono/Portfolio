@@ -1,10 +1,12 @@
-const modalButton = document.querySelector('.more')
+const modalButton = document.querySelectorAll('.more')
 const modal = document.querySelector('.modal')
 const overlay = modal.querySelector('.overlay')
 const closeButton = modal.querySelector('.modal__close')
 
-modalButton.addEventListener('click', () => {
+modalButton.forEach((btn) => {
+	btn.addEventListener('click', () => {
 	modal.classList.remove('hidden')
+})
 })
 
 overlay.addEventListener('click', () => {
