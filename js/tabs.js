@@ -25,6 +25,12 @@ tabButtons.forEach((tabButton) => {
 		changeContent(tabImages, dataValue);
 		changeContent(tabFeatureImage, dataValue);
 		changeContent(tabDesignTitle, dataValue);
+		
+		tabDesignTitle.forEach(title => {
+            		if(!title.classList.contains("hidden")) {
+                		document.title = title.innerText;
+           		}
+        	})
 
 		tabButtons.forEach((btn) => {
 			console.log(btn);
